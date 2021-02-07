@@ -4208,8 +4208,8 @@ you instead need to use a `BeanFactoryPostProcessor`, as described in
 The `org.springframework.beans.factory.config.BeanPostProcessor` interface consists of
 exactly two callback methods. When such a class is registered as a post-processor with
 the container, for each bean instance that is created by the container, the
-post-processor gets a callback from the container both before container
-initialization methods (such as `InitializingBean.afterPropertiesSet()` or any
+post-processor gets a callback from the container both before any bean
+initialization callbacks (such as `InitializingBean.afterPropertiesSet()` or any
 declared `init` method) are called, and after any bean initialization callbacks.
 The post-processor can take any action with the bean instance, including ignoring the
 callback completely. A bean post-processor typically checks for callback interfaces,
